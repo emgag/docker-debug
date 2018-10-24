@@ -6,4 +6,4 @@ Simple docker image with various helper tools for one-shot container debugging
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`stretch` (*stretch/Dockerfile*)](https://github.com/emgag/docker-debug/blob/master/stretched/Dockerfile) Based on debian:stretch-slim
+- [`stretch` (*stretch/Dockerfile*)](https://github.com/emgag/docker-debug/blob/master/stretch/Dockerfile) Based on debian:stretch-slim
