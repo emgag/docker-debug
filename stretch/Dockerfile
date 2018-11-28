@@ -9,12 +9,17 @@ RUN apt-get update && apt-get install -y \
         httpie \
         iputils-arping \
         iputils-ping \
+        iproute2 \
         ldnsutils \
+        mtr \
         openssh-client \
         openssl \
         procps \
         strace \
         swaks \
+        tcpdump \
+        tcptraceroute \
+        traceroute \
         unzip \
     && apt-get clean \
     && apt-get autoremove -y \
