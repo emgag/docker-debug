@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 LABEL maintainer="Matthias Blaser <mb@emgag.com>"
 
 RUN apt-get update && apt-get install -y \

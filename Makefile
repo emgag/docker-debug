@@ -1,6 +1,12 @@
-.PHONY: build stretch
+.PHONY: build buster stretch
 
-build: stretch
+build: buster stretch
+
+buster:
+	docker build --pull \
+		-t emgag/debug:buster \
+		buster
+	docker push emgag/debug:buster
 
 stretch:
 	docker build --pull \
