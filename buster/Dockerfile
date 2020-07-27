@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
         openssh-client \
         openssl \
         procps \
+        redis-server \
         rsync \
         strace \
         swaks \
