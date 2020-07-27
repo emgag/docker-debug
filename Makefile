@@ -5,8 +5,10 @@ build: buster stretch
 buster:
 	docker build --pull \
 		-t emgag/debug:buster \
+		-t emgag/debug:latest \
 		buster
 	docker push emgag/debug:buster
+	docker push emgag/debug:latest
 
 stretch:
 	docker build --pull \
