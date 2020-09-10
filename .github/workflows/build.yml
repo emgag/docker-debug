@@ -1,0 +1,31 @@
+name: build
+
+on:
+  push:
+
+env:
+  GHCR_IMAGE: ghcr.io/emgag/debug
+  GHCR_USER: emgag-service
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Login to github docker registry
+        uses: azure/docker-login@v1
+        with:
+          login-server: ghcr.io
+          username: ${{ env.GHCR_USER }}
+          password: ${{ secrets.CR_PAT }}
+
+      - name: Build image
+        run: >
+          docker build --pull
+          -t ${{ env.GHCR_IMAGE }}:latest
+          .
+
+      - name: Push image
+        run: docker push ${{ env.GHCR_IMAGE }}:latest
