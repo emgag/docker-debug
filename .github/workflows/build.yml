@@ -3,7 +3,7 @@ name: build
 on:
   push:
   schedule:
-    - build: '1 1 * * 1'
+    - cron: '1 1 * * 1'
 
 env:
   GHCR_IMAGE: ghcr.io/emgag/debug
